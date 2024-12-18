@@ -77,8 +77,7 @@
                 <div class="container my-5 py-5">
                     <div class="row align-items-center g-5">
                         <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="mb-4">Pemesanan Bakso Yang Praktis <i class="fa fa-utensils text-primary me-2"></i>Restoran</h1>
-                            <h1 class="display-3 text-white animated slideInLeft"></h1>
+                            <h1 class="display-3 text-white animated slideInLeft">Pemesanan Bakso Yang Praktis</h1>
                             <p class="mb-2"></i>Pesan Bakso Soponyono Favorit Anda hanya dengan beberapa klik! Nikmati berbagai pilihan menu, layanan Pre-Order, dan pengantaran langsung ke rumah Anda. Kami hadir untuk mempermudah Anda mendapatkan bakso lezat tanpa repot</p>
                             <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
                         </div>
