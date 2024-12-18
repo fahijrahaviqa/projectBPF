@@ -91,7 +91,7 @@
                                 <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="/assets/img/warung1.jpeg">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="/assets/img/warung2.jpeg" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="/assets/img/warung2.jpeg" style="margin-top: -10%;">
                             </div>
                             <div class="col-6 text-end">
                                 <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="/assets/img/warung3.jpeg">
@@ -125,7 +125,6 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
                     </div>
                 </div>
             </div>
@@ -290,3 +289,4 @@
 </body>
 
 </html>
+

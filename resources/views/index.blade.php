@@ -95,21 +95,36 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-4">
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item rounded pt-3">
-                            <div class="p-4">
-                                <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
-                                <h5>Launching Menu Baru</h5>
-                                <p> kami mempersembahkan menu spesial terbaru: <b>bakso iga!</b> Perpaduan sempurna antara bakso jumbo yang lembut, potongan iga sapi yang juicy, disajikan dengan kuah kaldu khas malang yang gurih. Menu spesial ini siap hadir di semua outlet mulai 1 Januari 2025</p>
-                            </div> 
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-lg-33 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
                                 <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
-                                <h5>Launching outlet baru</h5>
-                                <p> kami telah membuka cabang baru di Panam!</p>
+                                <div>
+                                    <h5>Kami persembahkan menu spesial terbaru: <strong>Bakso Iga!</strong></h5>
+                                    <p>✨ <strong>Keunggulan Menu:</strong></p>
+                                    <ul>
+                                        <li><strong>Bakso Jumbo:</strong> Tekstur lembut yang memanjakan lidah.</li>
+                                        <li><strong>Iga Sapi:</strong> Potongan juicy yang kaya rasa.</li>
+                                        <li><strong>Kuah Kaldu Khas Malang:</strong> Gurih dan beraroma khas.</li>
+                                    </ul>
+                                    <p>🎯 <strong>Tersedia mulai:</strong></p>
+                                    <ul>
+                                        <li>📅 <strong>1 Januari 2025</strong></li>
+                                        <li>📍 <strong>Semua Outlet Kami</strong></li>
+                                    </ul>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-lg-33 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-store text-primary mb-4"></i>
+                                <div>
+                                    <h5>🎉 <strong>Launching Outlet Baru</strong> 🎉</h5>
+                                    <p>✨ Kami telah membuka cabang baru di <strong>Panam</strong>!</p>
+                                    <p>🎯 Ayo kunjungi dan nikmati pengalaman terbaik kami di lokasi baru ini.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -130,7 +145,7 @@
                                 <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="/assets/img/warung1.jpeg">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="/assets/img/warung2.jpeg" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="/assets/img/warung2.jpeg" style="margin-top: -10%;">
                             </div>
                             <div class="col-6 text-end">
                                 <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="/assets/img/warung3.jpeg">
