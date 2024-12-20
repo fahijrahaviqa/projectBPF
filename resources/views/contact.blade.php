@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Restoran - Bootstrap Restaurant Template</title>
+    <title>Bakso Soponyono Cak Agus</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="/assets/img/favicon.ico" rel="icon">
+    <link href="/assets/img/logo.jpg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,20 +56,19 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="{{ route('index.index') }}" class="nav-item nav-link">Home</a>
-                        <a href="{{ route('about.index') }}" class="nav-item nav-link">About</a>
-                        <a href="{{ route('service.index') }}" class="nav-item nav-link">Service</a>
                         <a href="{{ route('menu.index') }}" class="nav-item nav-link active">Menu</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <a href="{{ route('service.index') }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
                             <div class="dropdown-menu m-0">
-                                <a href="{{ route('booking.index') }}" class="dropdown-item">Booking</a>
-                                <a href="{{ route('team.index') }}" class="dropdown-item">Our Team</a>
-                                <a href="{{ route('testimonial.index') }}" class="dropdown-item">Testimonial</a>
+                                <a href="{{ route('booking.index') }}" class="dropdown-item">Pesan Antar</a>
+                                <a href="{{ route('team.index') }}" class="dropdown-item">Pre-Order</a>
+                                <a href="{{ route('booking.index') }}" class="dropdown-item">Reservasi</a>
                             </div>
                         </div>
-                        <a href="{{ route('contact.index') }}" class="nav-item nav-link">Contact</a>
+                        <a href="{{ route('about.index') }}" class="nav-item nav-link">Tentang Kami</a>
+                        <a href="{{ route('testimonial.index') }}" class="nav-item nav-link">Testimoni</a>
+                        <a href="{{ route('contact.index') }}" class="nav-item nav-link">Kontak</a>
                     </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
                 </div>
             </nav>
 
