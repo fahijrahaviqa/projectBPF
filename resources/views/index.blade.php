@@ -24,7 +24,7 @@
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/css/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/assets/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
@@ -830,71 +830,66 @@
         </div>
         <!-- Team End -->
 
+<!-- client section -->
 
-        <!-- Testimonial Start -->
-        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="text-center">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
-                    <h1 class="mb-5">Our Clients Say!!!</h1>
-                </div>
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item bg-transparent border rounded p-4">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
-                            diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="/assets/img/testimonial-1.jpg"
-                                style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
-                            diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="/assets/img/testimonial-2.jpg"
-                                style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
-                            diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="/assets/img/testimonial-3.jpg"
-                                style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore
-                            diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="/assets/img/testimonial-4.jpg"
-                                style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="client_section layout_padding">
+    <div class="container">
+      <div class="col-md-11 col-lg-10 mx-auto">
+        <div class="heading_container heading_center">
+          <h2>
+            Testimonial
+          </h2>
         </div>
-        <!-- Testimonial End -->
+        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="detail-box">
+                <h4>
+                  Virginia
+                </h4>
+                <p>
+                  jhijo
+                </p>
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="detail-box">
+                <h4>
+                  Virginia
+                </h4>
+                <p>
+                  inono
+                 </p>
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="detail-box">
+                <h4>
+                  Virginia
+                </h4>
+                <p>
+                  knon
+                </p>
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev d-none" href="#customCarousel1" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
 
 
         <!-- Footer Start -->
@@ -981,7 +976,7 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/owlcarousel/assets/css/owl.carousel.min.js"></script>
     <script src="lib/tempusdominus/assets/js/moment.min.js"></script>
     <script src="lib/tempusdominus/assets/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/assets/js/tempusdominus-bootstrap-4.min.js"></script>

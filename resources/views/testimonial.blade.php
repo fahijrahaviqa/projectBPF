@@ -216,7 +216,7 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/owlcarousel/assests/css/owl.carousel.min.js"></script>
     <script src="lib/tempusdominus/assets/js/moment.min.js"></script>
     <script src="lib/tempusdominus/assets/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/assets/js/tempusdominus-bootstrap-4.min.js"></script>

@@ -12541,4 +12541,76 @@ fieldset:disabled .btn {
     .d-print-none {
         display: none !important
     }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+    }
+
+    .bs-popover-top>.arrow,
+    .bs-popover-auto[x-placement^="top"]>.arrow {
+        bottom: calc((0.5rem + 1px) * -1);
+    }
+
+    .bs-popover-top>.arrow::before,
+    .bs-popover-auto[x-placement^="top"]>.arrow::before {
+        bottom: 0;
+        border-width: 0.5rem 0.5rem 0;
+        border-top-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .bs-popover-top>.arrow::after,
+    .bs-popover-auto[x-placement^="top"]>.arrow::after {
+        bottom: 1px;
+        border-width: 0.5rem 0.5rem 0;
+        border-top-color: #fff;
+    }
+
+    .carousel-item.active,
+    .carousel-item-next,
+    .carousel-item-prev {
+        display: block;
+    }
+
+    .carousel-item-next:not(.carousel-item-left),
+    .active.carousel-item-right {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    .carousel-item-prev:not(.carousel-item-right),
+    .active.carousel-item-left {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+
+    .carousel-fade .carousel-item {
+        opacity: 0;
+        transition-property: opacity;
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    .carousel-fade .carousel-item.active,
+    .carousel-fade .carousel-item-next.carousel-item-left,
+    .carousel-fade .carousel-item-prev.carousel-item-right {
+        z-index: 1;
+        opacity: 1;
+    }
 }
