@@ -23,9 +23,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/css/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/assets/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="assets/lib/owlcarousel/assets/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/lib/tempusdominus/assets/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -65,11 +65,11 @@
                         <div class="nav-item dropdown">
                             <a href="{{ route('service.index') }}" class="nav-link dropdown-toggle"
                                 data-bs-toggle="dropdown">Layanan</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="{{ route('booking.index') }}" class="dropdown-item">Pesan Antar</a>
-                                <a href="{{ route('team.index') }}" class="dropdown-item">Pre-Order</a>
-                                <a href="{{ route('booking.index') }}" class="dropdown-item">Reservasi</a>
-                            </div>
+                                <div class="dropdown-menu m-0">
+                                    <a href="{{ route('pesan.index') }}" class="dropdown-item">Pesan Antar</a>
+                                    <a href="{{ route('preorder.index') }}" class="dropdown-item">Pre-Order</a>
+                                    <a href="{{ route('booking.index') }}" class="dropdown-item">Reservasi</a>
+                                </div>
                         </div>
                         <a href="{{ route('about.index') }}" class="nav-item nav-link">Tentang Kami</a>
                         <a href="{{ route('testimonial.index') }}" class="nav-item nav-link">Testimoni</a>
@@ -133,7 +133,6 @@
                                     <p>✨ Kami telah membuka cabang baru di <strong>Panam</strong>!</p>
                                     <p>🎯 Ayo kunjungi dan nikmati pengalaman terbaik kami di lokasi baru ini.</p>
                                 </div>
-
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31917.50895707572!2d101.34188037910157!3d0.4619908999999964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5a842d44499c5%3A0x90b4b00ee537c3c9!2sBakso%20Sopo%20Nyono%20%22Cak%20Agus%203%22!5e0!3m2!1sen!2sid!4v1734676900617!5m2!1sen!2sid"
                                     width="570" height="150" style="border:0;" allowfullscreen=""
@@ -665,50 +664,42 @@
         <!-- Reservation Start -->
         <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
             <div class="row g-0">
-                <div class="col-md-6">
-                    <div class="video">
-                        <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
                 <div class="col-md-6 bg-dark d-flex align-items-center">
                     <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
-                        <h1 class="text-white mb-4">Book A Table Online</h1>
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Booking</h5>
+                        <center><h1 class="text-white mb-4">Pesan Meja Sekarang!</h1></center>
                         <form>
                             <div class="row g-3">
-                                <div class="col-md-6">
+                                <div class="col-md-66">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name"
-                                            placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <label for="name">Masukkan Nama</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-66">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email"
-                                            placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <label for="email">Masukkan Email </label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-66">
                                     <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            id="datetime" placeholder="Date & Time" data-target="#date3"
-                                            data-toggle="datetimepicker" />
-                                        <label for="datetime">Date & Time</label>
+                                        <input type="date" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                        <label for="datetime">Tanggal</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-66">
+                                    <div class="form-floating date" id="date4" data-target-input="nearest">
+                                        <input type="time" class="form-control datetimepicker-input" id="datetime" placeholder="Time" data-target="#date4" data-toggle="datetimepicker" />
+                                        <label for="time">Waktu</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-66">
                                     <div class="form-floating">
-                                        <select class="form-select" id="select1">
-                                            <option value="1">People 1</option>
-                                            <option value="2">People 2</option>
-                                            <option value="3">People 3</option>
-                                        </select>
-                                        <label for="select1">No Of People</label>
+                                        <input list="people-options" class="form-control" id="people-input" placeholder="Masukkan jumlah orang">
+                                        <datalist id="people-options">
+                                        </datalist>
+                                        <label for="people-input">Jumlah Orang</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -727,20 +718,18 @@
             </div>
         </div>
 
-        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content rounded-0">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <!-- 16:9 aspect ratio -->
                         <div class="ratio ratio-16x9">
-                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
-                                allowscriptaccess="always" allow="autoplay"></iframe>
+                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                                allow="autoplay"></iframe>
                         </div>
                     </div>
                 </div>
@@ -830,66 +819,62 @@
         </div>
         <!-- Team End -->
 
-<!-- client section -->
-
-<section class="client_section layout_padding">
-    <div class="container">
-      <div class="col-md-11 col-lg-10 mx-auto">
-        <div class="heading_container heading_center">
-          <h2>
-            Testimonial
-          </h2>
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
+                    <h1 class="mb-5">Our Clients Say!!!</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="/assets/img/testimonial-1.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Client Name</h5>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="/assets/img/testimonial-2.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Client Name</h5>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="/assets/img/testimonial-3.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Client Name</h5>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="/assets/img/testimonial-4.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Client Name</h5>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="detail-box">
-                <h4>
-                  Virginia
-                </h4>
-                <p>
-                  jhijo
-                </p>
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="detail-box">
-                <h4>
-                  Virginia
-                </h4>
-                <p>
-                  inono
-                 </p>
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="detail-box">
-                <h4>
-                  Virginia
-                </h4>
-                <p>
-                  knon
-                </p>
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev d-none" href="#customCarousel1" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end client section -->
+        <!-- Testimonial End -->
 
 
         <!-- Footer Start -->
@@ -972,14 +957,14 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/assets/css/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/assets/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/assets/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/assets/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="assets/lib/wow/wow.min.js"></script>
+    <script src="assets/lib/easing/easing.min.js"></script>
+    <script src="assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="assets/lib/counterup/counterup.min.js"></script>
+    <script src="assets/lib/owlcarousel/assets/css/owl.carousel.min.js"></script>
+    <script src="assets/lib/tempusdominus/assets/js/moment.min.js"></script>
+    <script src="assets/lib/tempusdominus/assets/js/moment-timezone.min.js"></script>
+    <script src="assets/lib/tempusdominus/assets/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="assets/js/main.js"></script>

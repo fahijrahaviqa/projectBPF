@@ -21,9 +21,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/assets/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/lib/tempusdominus/assets/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -60,8 +60,8 @@
                         <div class="nav-item dropdown">
                             <a href="{{ route('service.index') }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
                             <div class="dropdown-menu m-0">
-                                <a href="{{ route('booking.index') }}" class="dropdown-item">Pesan Antar</a>
-                                <a href="{{ route('team.index') }}" class="dropdown-item">Pre-Order</a>
+                                <a href="{{ route('pesan.index') }}" class="dropdown-item">Pesan Antar</a>
+                                <a href="{{ route('preorder.index') }}" class="dropdown-item">Pre-Order</a>
                                 <a href="{{ route('booking.index') }}" class="dropdown-item">Reservasi</a>
                             </div>
                         </div>
@@ -280,14 +280,14 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/assets/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/assets/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/assets/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="assets/lib/wow/wow.min.js"></script>
+    <script src="assets/lib/easing/easing.min.js"></script>
+    <script src="assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="assets/lib/counterup/counterup.min.js"></script>
+    <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="assets/lib/tempusdominus/assets/js/moment.min.js"></script>
+    <script src="assets/lib/tempusdominus/assets/js/moment-timezone.min.js"></script>
+    <script src="assets/lib/tempusdominus/assets/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="assets/js/main.js"></script>

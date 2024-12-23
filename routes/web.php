@@ -10,6 +10,8 @@ use App\Http\Controllers\menuController;
 use App\Http\Controllers\serviceController;
 use App\Http\Controllers\teamController;
 use App\Http\Controllers\testimonialController;
+use App\Http\Controllers\pesanController;
+use App\Http\Controllers\preorderController;
 
 
 
@@ -25,3 +27,5 @@ route::resource('menu', menuController::class);
 route::resource('service', serviceController::class);
 route::resource('team', teamController::class);
 route::resource('testimonial', testimonialController::class);
+route::resource('preorder', preorderController::class);
+route::resource('pesan', pesanController::class);

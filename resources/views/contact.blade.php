@@ -21,9 +21,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/assets/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/lib/tempusdominus/assets/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -60,8 +60,8 @@
                         <div class="nav-item dropdown">
                             <a href="{{ route('service.index') }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
                             <div class="dropdown-menu m-0">
-                                <a href="{{ route('booking.index') }}" class="dropdown-item">Pesan Antar</a>
-                                <a href="{{ route('team.index') }}" class="dropdown-item">Pre-Order</a>
+                                <a href="{{ route('pesan.index') }}" class="dropdown-item">Pesan Antar</a>
+                                <a href="{{ route('preorder.index') }}" class="dropdown-item">Pre-Order</a>
                                 <a href="{{ route('booking.index') }}" class="dropdown-item">Reservasi</a>
                             </div>
                         </div>
@@ -105,22 +105,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="col-md-66 wow fadeIn" data-wow-delay="0.1s">
                         <iframe class="position-relative rounded w-100 h-100"
-                            iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6666610504712!2d101.46598469999999!3d0.4995707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5afc040c9d0db%3A0x1208d9c5e29b0e8e!2sBakso%20Sopo%20Nyono%20Cak%20Agus!5e0!3m2!1sen!2sid!4v1734483666455!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6666610504712!2d101.46598469999999!3d0.4995707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5afc040c9d0db%3A0x1208d9c5e29b0e8e!2sBakso%20Sopo%20Nyono%20Cak%20Agus!5e0!3m2!1sen!2sid!4v1734483666455!5m2!1sen!2sid" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-66">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
                             <form>
                                 <div class="row g-3">
-                                    <div class="col-md-6">
+                                    <div class="col-md-66">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" id="name" placeholder="Your Name">
                                             <label for="name">Your Name</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-66">
                                         <div class="form-floating">
                                             <input type="email" class="form-control" id="email" placeholder="Your Email">
                                             <label for="email">Your Email</label>
@@ -195,7 +195,7 @@
             <div class="container">
                 <div class="copyright">
                     <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <div class="col-md-66 text-center text-md-start mb-3 mb-md-0">
                             &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
 							
 							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
@@ -224,14 +224,14 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/assets/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/assets/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/assets/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="assets/lib/wow/wow.min.js"></script>
+    <script src="assets/lib/easing/easing.min.js"></script>
+    <script src="assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="assets/lib/counterup/counterup.min.js"></script>
+    <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="assets/lib/tempusdominus/assets/js/moment.min.js"></script>
+    <script src="assets/lib/tempusdominus/assets/js/moment-timezone.min.js"></script>
+    <script src="assets/lib/tempusdominus/assets/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="assets/js/main.js"></script>

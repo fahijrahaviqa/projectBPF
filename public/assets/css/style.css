@@ -392,7 +392,7 @@
 .testimonial-carousel .owl-dots {
     margin-top: 24px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
 }
 
@@ -478,6 +478,7 @@
     border-right: none;
 }
 
+/* BAGIAN TESTIMONI DETAIL-BOX */
 
 .recipe_section .box {
     text-align: center;
@@ -785,3 +786,5 @@
         -ms-flex-align: center;
             align-items: center;
   }
+
+  /* BATAS DETAIL BOX */
