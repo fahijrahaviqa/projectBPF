@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
-    <title>Bakso Soponyono Cak Agus</title>
+    <title>{{ config('app.name', 'Bakso Soponyono Cak Agus') }}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="/assets/img/logo.jpg" rel="icon">
+    <link href="{{ asset('assets/img/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,19 +18,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="assets/lib/tempusdominus/assets/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/owlcarousel/assets/css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/tempusdominus/assets/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -42,13 +43,11 @@
         </div>
         <!-- Spinner End -->
 
-
-        <!-- Navbar & Hero Start -->
+        <!-- Navbar Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><img src="/assets/img/bakso.png"></i></h1>
-                    <!-- <img src="/assets/img/logo.png" alt="Logo"> -->
+                    <h1 class="text-primary m-0"><img src="{{ asset('assets/img/bakso.png') }}"></h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -56,7 +55,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="{{ route('index.index') }}" class="nav-item nav-link">Home</a>
-                        <a href="{{ route('menu.index') }}" class="nav-item nav-link active">Menu</a>
+                        <a href="{{ route('menu.index') }}" class="nav-item nav-link">Menu</a>
                         <div class="nav-item dropdown">
                             <a href="{{ route('service.index') }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
                             <div class="dropdown-menu m-0">
@@ -69,94 +68,65 @@
                         <a href="{{ route('testimonial.index') }}" class="nav-item nav-link">Testimoni</a>
                         <a href="{{ route('contact.index') }}" class="nav-item nav-link">Kontak</a>
                     </div>
+
+                    @guest
+                        <a href="{{ route('login') }}" class="btn btn-primary py-2 px-4">Login</a>
+                        <a href="{{ route('register') }}" class="btn btn-outline-primary py-2 px-4 ms-3">Register</a>
+                    @else
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://ui-avatars.com/api/?name={{ urlencode(auth()->user()->name) }}&background=random" 
+                                    alt="{{ auth()->user()->name }}" 
+                                    class="rounded-circle"
+                                    width="32" 
+                                    height="32">
+                                <span class="ms-2 text-white">{{ auth()->user()->name }}</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                @if(auth()->user()->isAdmin())
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
+                                            <i class="fas fa-tachometer-alt me-2"></i>
+                                            Dashboard
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                @endif
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('orders.index') }}">
+                                        <i class="fas fa-shopping-cart me-2"></i>
+                                        Pesanan Saya
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('profile.edit') }}">
+                                        <i class="fas fa-user me-2"></i>
+                                        Profile
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item text-danger">
+                                            <i class="fas fa-sign-out-alt me-2"></i>
+                                            Logout
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    @endguest
                 </div>
             </nav>
-
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
-                <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Reservation </h1>
-                </div>
-            </div>
         </div>
-        <!-- Navbar & Hero End -->
+        <!-- Navbar End -->
 
-
-<!-- Reservation Start -->
-<div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="row g-0">
-        <div class="col-md-6 bg-dark d-flex align-items-center">
-            <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-                <h5 class="section-title ff-secondary text-start text-primary fw-normal">Booking</h5>
-                <center><h1 class="text-white mb-4">Pesan Meja Sekarang!</h1></center>
-                <form>
-                    <div class="row g-3">
-                        <div class="col-md-66">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                <label for="name">Masukkan Nama</label>
-                            </div>
-                        </div>
-                        <div class="col-md-66">
-                            <div class="form-floating">
-                                <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                <label for="email">Masukkan Email </label>
-                            </div>
-                        </div>
-                        <div class="col-md-66">
-                            <div class="form-floating date" id="date3" data-target-input="nearest">
-                                <input type="date" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                <label for="datetime">Tanggal</label>
-                            </div>
-                        </div>
-                        <div class="col-md-66">
-                            <div class="form-floating date" id="date4" data-target-input="nearest">
-                                <input type="time" class="form-control datetimepicker-input" id="datetime" placeholder="Time" data-target="#date4" data-toggle="datetimepicker" />
-                                <label for="time">Waktu</label>
-                            </div>
-                        </div>
-                        <div class="col-md-66">
-                            <div class="form-floating">
-                                <input list="people-options" class="form-control" id="people-input" placeholder="Masukkan jumlah orang">
-                                <datalist id="people-options">
-                                </datalist>
-                                <label for="people-input">Jumlah Orang</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-floating">
-                                <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                <label for="message">Special Request</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content rounded-0">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- 16:9 aspect ratio -->
-                <div class="ratio ratio-16x9">
-                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                        allow="autoplay"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Reservation Start -->
-        
+        <!-- Content Start -->
+        <main>
+            @yield('content')
+        </main>
+        <!-- Content End -->
 
         <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -203,10 +173,8 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
                             Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
@@ -223,7 +191,6 @@
         </div>
         <!-- Footer End -->
 
-
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
@@ -231,17 +198,17 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/lib/wow/wow.min.js"></script>
-    <script src="assets/lib/easing/easing.min.js"></script>
-    <script src="assets/lib/waypoints/waypoints.min.js"></script>
-    <script src="assets/lib/counterup/counterup.min.js"></script>
-    <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="assets/lib/tempusdominus/assets/js/moment.min.js"></script>
-    <script src="assets/lib/tempusdominus/assets/js/moment-timezone.min.js"></script>
-    <script src="assets/lib/tempusdominus/assets/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="{{ asset('assets/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/owlcarousel/assets/css/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/tempusdominus/assets/js/moment.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/tempusdominus/assets/js/moment-timezone.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/tempusdominus/assets/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>
