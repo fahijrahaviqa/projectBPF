@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class preorderController extends Controller
+class PreorderController extends Controller
 {
     /**
      * Display a listing of the resource.

@@ -2,16 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MenuItem;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
-class indexController extends Controller
+class IndexController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('index');
+        $menuMakanan = MenuItem::whereHas('categories', function ($query) {
+            $query->where('name', 'Makanan');
+        })->get();
+        $menuMinuman = MenuItem::whereHas('categories', function ($query) {
+            $query->where('name', 'Minuman');
+        })->get();
+        $testimoni = Testimonial::all();
+        return view('index', compact('menuMakanan', 'menuMinuman', 'testimoni'));
     }
 
     /**
