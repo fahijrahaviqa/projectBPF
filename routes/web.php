@@ -16,7 +16,7 @@ use App\Http\Controllers\preorderController;
 
 
 Route::get('/', function () {
-    return view('menu');
+    return view('index');
 });
 
 route::resource('index', indexController::class);
