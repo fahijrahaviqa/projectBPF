@@ -147,13 +147,6 @@
                         Menu
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->is('admin/categories*') ? 'active' : '' }}" 
-                       href="{{ route('admin.categories.index') }}">
-                        <i class="fas fa-list me-2"></i>
-                        Kategori
-                    </a>
-                </li>
             </ul>
 
             <!-- Order Management -->
@@ -164,13 +157,6 @@
                        href="{{ route('admin.orders.index') }}">
                         <i class="fas fa-shopping-cart me-2"></i>
                         Pesanan
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->is('admin/drive-thru*') ? 'active' : '' }}" 
-                       href="{{ route('admin.drive-thru.index') }}">
-                        <i class="fas fa-car me-2"></i>
-                        Drive Thru
                     </a>
                 </li>
             </ul>
@@ -205,10 +191,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('admin/team*') ? 'active' : '' }}" 
-                       href="{{ route('team.index') }}">
+                    <a class="nav-link {{ request()->is('admin/contact*') ? 'active' : '' }}" 
+                       href="{{ route('contact.index') }}">
                         <i class="fas fa-users me-2"></i>
-                        Tim
+                        Kontak
                     </a>
                 </li>
                 <li class="nav-item">

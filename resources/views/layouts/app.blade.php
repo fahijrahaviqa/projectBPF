@@ -56,14 +56,6 @@
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="{{ route('index.index') }}" class="nav-item nav-link">Home</a>
                         <a href="{{ route('menu.index') }}" class="nav-item nav-link">Menu</a>
-                        <div class="nav-item dropdown">
-                            <a href="{{ route('service.index') }}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="{{ route('pesan.index') }}" class="dropdown-item">Pesan Antar</a>
-                                <a href="{{ route('preorder.index') }}" class="dropdown-item">Pre-Order</a>
-                                <a href="{{ route('booking.index') }}" class="dropdown-item">Reservasi</a>
-                            </div>
-                        </div>
                         <a href="{{ route('about.index') }}" class="nav-item nav-link">Tentang Kami</a>
                         <a href="{{ route('testimonial.index') }}" class="nav-item nav-link">Testimoni</a>
                         <a href="{{ route('contact.index') }}" class="nav-item nav-link">Kontak</a>

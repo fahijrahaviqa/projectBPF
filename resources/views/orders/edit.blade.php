@@ -84,11 +84,11 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Nama Pembeli</label>
+                                        <label class="form-label">Nama Penerima</label>
                                         <input type="text" name="recipient_name" class="form-control" required
                                                maxlength="255" value="{{ $order->deliveryAddress->recipient_name }}">
                                         <div class="invalid-feedback">
-                                            Nama pembeli harus diisi
+                                            Nama penerima harus diisi
                                         </div>
                                     </div>
                                 </div>
@@ -100,6 +100,27 @@
                                                value="{{ $order->deliveryAddress->recipient_phone }}">
                                         <div class="invalid-feedback">
                                             Nomor telepon tidak valid
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Alamat Lengkap</label>
+                                        <textarea name="address" class="form-control" rows="3" required
+                                                  maxlength="500">{{ $order->deliveryAddress->address }}</textarea>
+                                        <div class="invalid-feedback">
+                                            Alamat harus diisi
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Kode Pos</label>
+                                        <input type="text" name="postal_code" class="form-control"
+                                               pattern="^[0-9]*$" maxlength="10"
+                                               value="{{ $order->deliveryAddress->postal_code }}">
+                                        <div class="invalid-feedback">
+                                            Kode pos harus berupa angka
                                         </div>
                                     </div>
                                 </div>

@@ -57,22 +57,6 @@
                     <h1 class="mb-5">Contact For Any Query</h1>
                 </div>
                 <div class="row g-4">
-                    <div class="col-12">
-                        <div class="row gy-4">
-                            <div class="col-md-4">
-                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">Booking</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>book@example.com</p>
-                            </div>
-                            <div class="col-md-4">
-                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">General</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</p>
-                            </div>
-                            <div class="col-md-4">
-                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">Technical</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>tech@example.com</p>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-md-66 wow fadeIn" data-wow-delay="0.1s">
                         <iframe class="position-relative rounded w-100 h-100"
                             iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6666610504712!2d101.46598469999999!3d0.4995707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5afc040c9d0db%3A0x1208d9c5e29b0e8e!2sBakso%20Sopo%20Nyono%20Cak%20Agus!5e0!3m2!1sen!2sid!4v1734483666455!5m2!1sen!2sid" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">

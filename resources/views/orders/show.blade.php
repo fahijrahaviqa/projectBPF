@@ -119,12 +119,20 @@
                             <h6 class="border-bottom pb-2">Informasi Pengiriman</h6>
                             <table class="table table-sm">
                                 <tr>
-                                    <th width="150">Nama Pembeli</th>
+                                    <th width="150">Nama Penerima</th>
                                     <td>{{ $order->deliveryAddress?->recipient_name }}</td>
                                 </tr>
                                 <tr>
                                     <th>Nomor Telepon</th>
                                     <td>{{ $order->deliveryAddress?->recipient_phone }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Alamat</th>
+                                    <td>{{ $order->deliveryAddress?->address }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Kode Pos</th>
+                                    <td>{{ $order->deliveryAddress?->postal_code ?: '-' }}</td>
                                 </tr>
                             </table>
                         </div>

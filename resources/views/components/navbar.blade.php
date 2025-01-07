@@ -11,16 +11,8 @@
         <div class="navbar-nav ms-auto py-0 pe-4">
             <a href="{{ route('index.index') }}" class="nav-item nav-link {{ request()->routeIs('index.*') ? 'active' : '' }}">Home</a>
             <a href="{{ route('menu.index') }}" class="nav-item nav-link {{ request()->routeIs('menu.*') ? 'active' : '' }}">Menu</a>
-            <div class="nav-item dropdown">
-                <a href="{{ route('service.index') }}" class="nav-link dropdown-toggle {{ request()->routeIs('service.*') || request()->routeIs('pesan.*') || request()->routeIs('preorder.*') || request()->routeIs('booking.*') ? 'active' : '' }}" data-bs-toggle="dropdown">Layanan</a>
-                <div class="dropdown-menu m-0">
-                    <a href="{{ route('pesan.index') }}" class="dropdown-item {{ request()->routeIs('pesan.*') ? 'active' : '' }}">Pesan Antar</a>
-                    <a href="{{ route('preorder.index') }}" class="dropdown-item {{ request()->routeIs('preorder.*') ? 'active' : '' }}">Pre-Order</a>
-                    <a href="{{ route('booking.index') }}" class="dropdown-item {{ request()->routeIs('booking.*') ? 'active' : '' }}">Reservasi</a>
-                </div>
-            </div>
-            <a href="{{ route('about.index') }}" class="nav-item nav-link {{ request()->routeIs('about.*') ? 'active' : '' }}">Tentang Kami</a>
             <a href="{{ route('testimonial.index') }}" class="nav-item nav-link {{ request()->routeIs('testimonial.*') ? 'active' : '' }}">Testimoni</a>
+            <a href="{{ route('about.index') }}" class="nav-item nav-link {{ request()->routeIs('about.*') ? 'active' : '' }}">Tentang Kami</a>
             <a href="{{ route('contact.index') }}" class="nav-item nav-link {{ request()->routeIs('contact.*') ? 'active' : '' }}">Kontak</a>
             @auth
                 <div class="nav-item dropdown">
