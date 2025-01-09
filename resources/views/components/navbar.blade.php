@@ -12,7 +12,6 @@
             <a href="{{ route('index.index') }}" class="nav-item nav-link {{ request()->routeIs('index.*') ? 'active' : '' }}">Home</a>
             <a href="{{ route('menu.index') }}" class="nav-item nav-link {{ request()->routeIs('menu.*') ? 'active' : '' }}">Menu</a>
             <a href="{{ route('testimonial.index') }}" class="nav-item nav-link {{ request()->routeIs('testimonial.*') ? 'active' : '' }}">Testimoni</a>
-            <a href="{{ route('about.index') }}" class="nav-item nav-link {{ request()->routeIs('about.*') ? 'active' : '' }}">Tentang Kami</a>
             <a href="{{ route('contact.index') }}" class="nav-item nav-link {{ request()->routeIs('contact.*') ? 'active' : '' }}">Kontak</a>
             @auth
                 <div class="nav-item dropdown">

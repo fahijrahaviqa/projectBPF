@@ -4,7 +4,7 @@
 
 @php
 $showHero = true;
-$heroTitle = 'Food Menu';
+$heroTitle = 'Menu';
 @endphp
 
 @section('content')
@@ -12,8 +12,8 @@ $heroTitle = 'Food Menu';
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
-            <h1 class="mb-5">Most Popular Items</h1>
+            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Pilihan Menu</h5>
+            <h1 class="mb-5">Pilih Menu, Nikmati Rasanya</h1>
         </div>
         <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
             <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">

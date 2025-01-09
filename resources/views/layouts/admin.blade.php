@@ -191,13 +191,6 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('admin/contact*') ? 'active' : '' }}" 
-                       href="{{ route('contact.index') }}">
-                        <i class="fas fa-users me-2"></i>
-                        Kontak
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link {{ request()->is('admin/about*') ? 'active' : '' }}" 
                        href="{{ route('about.index') }}">
                         <i class="fas fa-info-circle me-2"></i>

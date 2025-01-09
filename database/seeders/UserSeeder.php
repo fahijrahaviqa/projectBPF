@@ -57,6 +57,14 @@ class UserSeeder extends Seeder
                 'phone' => '081234567894',
                 'address' => 'Jl. Pelanggan No. 4, Pekanbaru'
             ],
+            [
+                'name' => 'Fahijrah Aviqa',
+                'email' => 'pika@gmail.com',
+                'password' => Hash::make('123123123'),
+                'role' => 'customer',
+                'phone' => '081234567895',
+                'address' => 'Jl. Pelanggan No. 5, Pekanbaru'
+            ],
         ]);
     }
 }
