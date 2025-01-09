@@ -131,23 +131,18 @@ document.getElementById('image').addEventListener('change', function(e) {
     if (file) {
         const reader = new FileReader();
         reader.onload = function(e) {
-            // Mencari elemen untuk menampilkan gambar preview
-            const container = document.querySelector('.p-2.border.rounded');
-            if (container) {
-                container.innerHTML = ''; // Bersihkan konten lama
-                const preview = document.createElement('img');
-                preview.src = e.target.result;
-                preview.style.maxHeight = '200px';
-                preview.className = 'img-fluid';
-                container.appendChild(preview); // Tambahkan elemen gambar baru
-            } else {
-                console.error('Elemen container tidak ditemukan');
-            }
-        };
+            const preview = document.createElement('img');
+            preview.src = e.target.result;
+            preview.style.maxHeight = '200px';
+            preview.className = 'img-fluid';
+            
+            const container = this.parentElement.nextElementSibling.querySelector('.border');
+            container.innerHTML = '';
+            container.appendChild(preview);
+        }.bind(this);
         reader.readAsDataURL(file);
     }
 });
-
 </script>
 @endpush
 @endsection 

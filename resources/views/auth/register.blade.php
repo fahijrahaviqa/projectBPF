@@ -20,8 +20,8 @@
     <div class="container-xxl bg-dark py-5" style="margin-bottom: -5rem;">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="bg-dark text-center rounded p-5">
+                <div class="col-lg-5 col-md-7 col-sm-9 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-dark text-center rounded p-4" style="max-width: 400px; margin: 0 auto;">
                         <h1 class="text-white mb-4">Buat Akun Baru</h1>
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
@@ -30,7 +30,8 @@
                                     <div class="form-floating">
                                         <input type="text" class="form-control @error('name') is-invalid @enderror" 
                                             id="name" name="name" placeholder="Full Name"
-                                            value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                            value="{{ old('name') }}" required autocomplete="name" autofocus
+                                            style="height: 50px;">
                                         <label for="name">Full Name</label>
                                         @error('name')
                                             <span class="invalid-feedback" role="alert">
@@ -43,7 +44,8 @@
                                     <div class="form-floating">
                                         <input type="email" class="form-control @error('email') is-invalid @enderror" 
                                             id="email" name="email" placeholder="Email Address"
-                                            value="{{ old('email') }}" required autocomplete="email">
+                                            value="{{ old('email') }}" required autocomplete="email"
+                                            style="height: 50px;">
                                         <label for="email">Email Address</label>
                                         @error('email')
                                             <span class="invalid-feedback" role="alert">
@@ -56,7 +58,8 @@
                                     <div class="form-floating">
                                         <input type="password" class="form-control @error('password') is-invalid @enderror" 
                                             id="password" name="password" placeholder="Password"
-                                            required autocomplete="new-password">
+                                            required autocomplete="new-password"
+                                            style="height: 50px;">
                                         <label for="password">Password</label>
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
@@ -69,15 +72,16 @@
                                     <div class="form-floating">
                                         <input type="password" class="form-control" 
                                             id="password-confirm" name="password_confirmation" 
-                                            placeholder="Confirm Password" required autocomplete="new-password">
+                                            placeholder="Confirm Password" required autocomplete="new-password"
+                                            style="height: 50px;">
                                         <label for="password-confirm">Confirm Password</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Register</button>
+                                    <button class="btn btn-primary w-100 py-2" type="submit">Register</button>
                                 </div>
                                 <div class="col-12 mt-3">
-                                    <p class="text-white">Already have an account? 
+                                    <p class="text-white mb-0">Already have an account? 
                                         <a href="{{ route('login') }}" class="text-primary">Login here</a>
                                     </p>
                                 </div>

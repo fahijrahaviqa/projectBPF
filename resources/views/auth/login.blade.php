@@ -20,8 +20,8 @@
     <div class="container-xxl bg-dark py-5" style="margin-bottom: -5rem;">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="bg-dark text-center rounded p-5">
+                <div class="col-lg-5 col-md-7 col-sm-9 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-dark text-center rounded p-4" style="max-width: 400px; margin: 0 auto;">
                         <h1 class="text-white mb-4">Masuk ke Akun Anda</h1>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
@@ -30,7 +30,8 @@
                                     <div class="form-floating">
                                         <input type="email" class="form-control @error('email') is-invalid @enderror" 
                                             id="email" name="email" placeholder="Email Address"
-                                            value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                            value="{{ old('email') }}" required autocomplete="email" autofocus
+                                            style="height: 50px;">
                                         <label for="email">Email Address</label>
                                         @error('email')
                                             <span class="invalid-feedback" role="alert">
@@ -43,7 +44,8 @@
                                     <div class="form-floating">
                                         <input type="password" class="form-control @error('password') is-invalid @enderror" 
                                             id="password" name="password" placeholder="Password"
-                                            required autocomplete="current-password">
+                                            required autocomplete="current-password"
+                                            style="height: 50px;">
                                         <label for="password">Password</label>
                                         @error('password')
                                             <span class="invalid-feedback" role="alert">
@@ -62,7 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Login</button>
+                                    <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
                                 </div>
                                 @if (Route::has('password.request'))
                                     <div class="col-12 mt-3">
@@ -72,7 +74,7 @@
                                     </div>
                                 @endif
                                 <div class="col-12 mt-3">
-                                    <p class="text-white">Don't have an account? 
+                                    <p class="text-white mb-0">Don't have an account? 
                                         <a href="{{ route('register') }}" class="text-primary">Register here</a>
                                     </p>
                                 </div>
